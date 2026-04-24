@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 validate-plugin.py - UMPA プラグイン検証ツール
 
@@ -9,6 +10,10 @@ import os
 import json
 import sys
 from pathlib import Path
+
+# UTF-8 エンコーディングを強制
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 def check_plugin_structure(plugin_dir="."):
     """プラグイン構造を検証"""
@@ -23,7 +28,7 @@ def check_plugin_structure(plugin_dir="."):
         errors.append("❌ Missing: .claude-plugin/plugin.json")
     else:
         try:
-            with open(plugin_json) as f:
+            with open(plugin_json, encoding='utf-8') as f:
                 config = json.load(f)
                 required_fields = ["name", "description", "version", "author"]
                 missing_fields = [f for f in required_fields if f not in config]
