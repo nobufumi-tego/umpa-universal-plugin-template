@@ -24,8 +24,7 @@ jobs:
 
     - name: Check JSON Syntax
       run: |
-        python -m json.tool .claude-plugin/plugin.json > /dev/null
-        python -m json.tool examples/lean-canvas-plugin/.claude-plugin/plugin.json > /dev/null
+        python tools/validate-json.py
 
     - name: Check Markdown Links (optional)
       run: |
