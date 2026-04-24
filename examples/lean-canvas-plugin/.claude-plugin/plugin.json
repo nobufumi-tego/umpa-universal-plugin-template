@@ -6,8 +6,8 @@
     "name": "UMPA Contributors",
     "email": "support@umpa.dev"
   },
-  "homepage": "https://github.com/ynobufumi/umpa-universal-plugin-template/examples/lean-canvas-plugin",
-  "repository": "https://github.com/ynobufumi/umpa-universal-plugin-template",
+  "homepage": "https://github.com/nobufumi-tego/umpa-universal-plugin-template/examples/lean-canvas-plugin",
+  "repository": "https://github.com/nobufumi-tego/umpa-universal-plugin-template",
   "license": "MIT",
   "keywords": ["business", "lean-canvas", "template", "japanese", "multilingual"]
 }

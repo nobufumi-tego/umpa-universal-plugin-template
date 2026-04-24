@@ -6,7 +6,7 @@ UMPA プロジェクトへのコントリビューションを歓迎します！
 
 ### 1. バグ報告
 
-バグを発見した場合、[GitHub Issues](https://github.com/ynobufumi/umpa-universal-plugin-template/issues) で報告してください。
+バグを発見した場合、[GitHub Issues](https://github.com/nobufumi-tego/umpa-universal-plugin-template/issues) で報告してください。
 
 **Issue テンプレート**:
 ```

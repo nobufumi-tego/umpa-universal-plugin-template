@@ -89,7 +89,7 @@ umpa-universal-plugin-template/
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/ynobufumi/umpa-universal-plugin-template.git
+git clone https://github.com/nobufumi-tego/umpa-universal-plugin-template.git
 cd umpa-universal-plugin-template
 
 # template/ をコピーしてカスタマイズ
@@ -324,8 +324,8 @@ A: 仕様書の「カスタマイズガイド」を参照してください。
 ### フィードバック
 
 - 📧 Email: nobufumi.yoshida@tegosacloud.com
-- 🐙 GitHub: [@ynobufumi](https://github.com/ynobufumi)
-- 🔗 Issues: [GitHub Issues](https://github.com/ynobufumi/umpa-universal-plugin-template/issues)
+- 🐙 GitHub: [@nobufumi-tego](https://github.com/nobufumi-tego)
+- 🔗 Issues: [GitHub Issues](https://github.com/nobufumi-tego/umpa-universal-plugin-template/issues)
 
 ---
 

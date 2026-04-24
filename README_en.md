@@ -89,7 +89,7 @@ umpa-universal-plugin-template/
 
 ```bash
 # Clone the repository
-git clone https://github.com/ynobufumi/umpa-universal-plugin-template.git
+git clone https://github.com/nobufumi-tego/umpa-universal-plugin-template.git
 cd umpa-universal-plugin-template
 
 # Copy and customize the template
@@ -322,8 +322,8 @@ A: Refer to the "Customization Guide" in the specification.
 ### Feedback
 
 - 📧 Email: nobufumi.yoshida@tegosacloud.com
-- 🐙 GitHub: [@ynobufumi](https://github.com/ynobufumi)
-- 🔗 Issues: [GitHub Issues](https://github.com/ynobufumi/umpa-universal-plugin-template/issues)
+- 🐙 GitHub: [@nobufumi-tego](https://github.com/nobufumi-tego)
+- 🔗 Issues: [GitHub Issues](https://github.com/nobufumi-tego/umpa-universal-plugin-template/issues)
 
 ---
 
