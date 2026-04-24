@@ -85,6 +85,10 @@ umpa-universal-plugin-template/
 
 ## 🚀 Quick Start
 
+**Claude Code アシストを使用する場合**: [Claude Code でのクイックスタート](docs/CLAUDE_CODE_QUICKSTART.md) ⭐
+
+---
+
 ### 1. テンプレートをコピー
 
 ```bash

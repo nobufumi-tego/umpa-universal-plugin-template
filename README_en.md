@@ -85,6 +85,10 @@ umpa-universal-plugin-template/
 
 ## 🚀 Quick Start
 
+**Using Claude Code Assistant**: [Claude Code Quick Start](docs/CLAUDE_CODE_QUICKSTART.md) ⭐
+
+---
+
 ### 1. Copy the Template
 
 ```bash
