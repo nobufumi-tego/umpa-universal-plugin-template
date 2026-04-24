@@ -14,19 +14,21 @@ Author: Nobufumi Yoshida (@nobufumi-tego)
 
 1. **[概要・基本概念](spec/01-overview.md)** — UMPA とは、3層アーキテクチャ、メリット
 2. **[ディレクトリ構造](spec/02-directory-structure.md)** — プラグインの完全な構成例
-3. **[コアコンポーネント仕様](spec/03-components.md)** — plugin.json、SKILL.md、commands/、agents/ の詳細
-4. **[学習層（References）](spec/04-learning-layer.md)** — 多言語学習資料の構造と書き方
-5. **[ベストプラクティス](spec/05-best-practices.md)** — SKILL.md 作成時の注意点、テストチェックリスト
-6. **[クイックスタート](spec/06-quickstart.md)** — 10分でプラグイン開発を始める方法
+3. **[クイックスタート](spec/06-quickstart.md)** ⭐ — 10分でプラグイン開発を始める方法
+4. **[プラグイン作成実践ガイド](spec/07-plugin-creation.md)** ⭐ — 実際にプラグインを作成する手順
+5. **[コアコンポーネント仕様](spec/03-components.md)** — plugin.json、SKILL.md、commands/、agents/ の詳細
+6. **[学習層（References）](spec/04-learning-layer.md)** — 多言語学習資料の構造と書き方
+7. **[ベストプラクティス](spec/05-best-practices.md)** — SKILL.md 作成時の注意点、テストチェックリスト
 
 ### English Version
 
 1. **[Overview & Architecture](spec/01-overview-en.md)** — What is UMPA, 3-layer architecture, benefits
 2. **[Directory Structure](spec/02-directory-structure-en.md)** — Complete plugin composition
-3. **[Core Components](spec/03-components-en.md)** — Details of plugin.json, SKILL.md, commands/, agents/
-4. **[Learning Layer (References)](spec/04-learning-layer-en.md)** — Multilingual learning materials structure
-5. **[Best Practices](spec/05-best-practices-en.md)** — Guidelines for SKILL.md, testing checklist
-6. **[Quick Start](spec/06-quickstart-en.md)** — Get started with plugin development in 10 minutes
+3. **[Quick Start](spec/06-quickstart-en.md)** ⭐ — Get started with plugin development in 10 minutes
+4. **[Plugin Creation Guide](spec/07-plugin-creation-en.md)** ⭐ — Step-by-step guide to create your first plugin
+5. **[Core Components](spec/03-components-en.md)** — Details of plugin.json, SKILL.md, commands/, agents/
+6. **[Learning Layer (References)](spec/04-learning-layer-en.md)** — Multilingual learning materials structure
+7. **[Best Practices](spec/05-best-practices-en.md)** — Guidelines for SKILL.md, testing checklist
 
 ---
 
@@ -36,12 +38,13 @@ Author: Nobufumi Yoshida (@nobufumi-tego)
 
 | 質問 | 参照ドキュメント |
 |------|-----------------|
+| すぐにプラグイン作成を始めたい | [07-plugin-creation.md](spec/07-plugin-creation.md) ⭐ |
+| 10分で概要を理解したい | [06-quickstart.md](spec/06-quickstart.md) ⭐ |
 | UMPA の仕組みを理解したい | [01-overview.md](spec/01-overview.md) |
 | プラグインの構造を知りたい | [02-directory-structure.md](spec/02-directory-structure.md) |
 | plugin.json や SKILL.md の書き方 | [03-components.md](spec/03-components.md) |
 | 多言語対応のやり方 | [04-learning-layer.md](spec/04-learning-layer.md) |
 | 開発時の注意点 | [05-best-practices.md](spec/05-best-practices.md) |
-| すぐに始めたい | [06-quickstart.md](spec/06-quickstart.md) |
 
 ---
 
