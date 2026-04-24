@@ -99,5 +99,14 @@ def check_plugin_structure(plugin_dir="."):
     return 1 if errors else 0
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] in ["-h", "--help", "help"]:
+        print("Usage: python validate-plugin.py [plugin_directory]")
+        print()
+        print("Examples:")
+        print("  python validate-plugin.py              # Validate current directory")
+        print("  python validate-plugin.py template/    # Validate template/")
+        print("  python validate-plugin.py my-plugin/   # Validate my-plugin/")
+        sys.exit(0)
+
     plugin_dir = sys.argv[1] if len(sys.argv) > 1 else "."
     sys.exit(check_plugin_structure(plugin_dir))
