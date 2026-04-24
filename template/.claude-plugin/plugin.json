@@ -1,0 +1,13 @@
+{
+  "name": "template-plugin",
+  "description": "このテンプレートを自分のプラグインにカスタマイズしてください",
+  "version": "1.0.0",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "homepage": "https://github.com/your-username/your-plugin-name",
+  "repository": "https://github.com/your-username/your-plugin-name",
+  "license": "MIT",
+  "keywords": ["template", "multilingual", "plugin"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "lean-canvas-jp",
+  "description": "日本語対応 Lean Canvas ビジネステンプレート生成プラグイン",
+  "version": "1.0.0",
+  "author": {
+    "name": "UMPA Contributors",
+    "email": "support@umpa.dev"
+  },
+  "homepage": "https://github.com/ynobufumi/umpa-universal-plugin-template/examples/lean-canvas-plugin",
+  "repository": "https://github.com/ynobufumi/umpa-universal-plugin-template",
+  "license": "MIT",
+  "keywords": ["business", "lean-canvas", "template", "japanese", "multilingual"]
+}

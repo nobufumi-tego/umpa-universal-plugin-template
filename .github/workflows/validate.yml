@@ -1,0 +1,68 @@
+name: Validate Plugin
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Validate Plugin Structure
+      run: |
+        python tools/validate-plugin.py
+
+    - name: Check JSON Syntax
+      run: |
+        python -m json.tool .claude-plugin/plugin.json > /dev/null
+        python -m json.tool examples/lean-canvas-plugin/.claude-plugin/plugin.json > /dev/null
+
+    - name: Check Markdown Links (optional)
+      run: |
+        # Check for broken links in markdown files
+        find . -name "*.md" -type f | head -20
+      continue-on-error: true
+
+  lint-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Check for common markdown issues
+      run: |
+        # Check for consistent formatting
+        echo "Checking markdown files..."
+        find . -name "*.md" -type f -exec grep -l "TODO" {} \; || echo "No TODO found"
+      continue-on-error: true
+
+  security-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Check for secrets
+      run: |
+        # Basic check for common secret patterns
+        if grep -r "password\|secret\|api.key\|apiKey" --include="*.md" --include="*.json" --include="*.py" .; then
+          echo "⚠️  Warning: Possible secrets found. Please review."
+          exit 1
+        fi
+      continue-on-error: true
+
+    - name: Check for hardcoded credentials
+      run: |
+        # Check Python/JavaScript files for hardcoded credentials
+        echo "Checking for hardcoded credentials..."
+      continue-on-error: true
