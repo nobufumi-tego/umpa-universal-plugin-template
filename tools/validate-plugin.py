@@ -77,9 +77,14 @@ def check_plugin_structure(plugin_dir="."):
     else:
         warnings.append("⚠️  Missing: references/ directory")
 
-    # Summary
+    return errors, warnings
+
+def validate_single_plugin(plugin_dir):
+    """単一のプラグインを検証して結果を表示"""
+    errors, warnings = check_plugin_structure(plugin_dir)
+
     print("\n" + "="*50)
-    print("Validation Summary")
+    print(f"Validation: {plugin_dir}")
     print("="*50)
 
     if errors:
@@ -98,15 +103,57 @@ def check_plugin_structure(plugin_dir="."):
 
     return 1 if errors else 0
 
+def validate_project_root():
+    """プロジェクトルートの全プラグインを検証"""
+    root = Path(".")
+    plugins_to_check = []
+
+    # Check for template/
+    if (root / "template").is_dir():
+        if (root / "template" / ".claude-plugin" / "plugin.json").exists():
+            plugins_to_check.append("template")
+
+    # Check for examples/
+    if (root / "examples").is_dir():
+        for example_dir in (root / "examples").iterdir():
+            if example_dir.is_dir() and not example_dir.name.startswith("."):
+                if (example_dir / ".claude-plugin" / "plugin.json").exists():
+                    plugins_to_check.append(str(example_dir))
+
+    if not plugins_to_check:
+        print("❌ No valid plugins found to validate.")
+        print("   Expected: template/ or examples/*/ with .claude-plugin/plugin.json")
+        return 1
+
+    all_valid = True
+    for plugin in plugins_to_check:
+        result = validate_single_plugin(plugin)
+        if result != 0:
+            all_valid = False
+
+    print("\n" + "="*50)
+    print("Overall Summary")
+    print("="*50)
+    if all_valid:
+        print("✅ All plugins are valid!")
+        return 0
+    else:
+        print("❌ Some plugins have errors or warnings.")
+        return 1
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] in ["-h", "--help", "help"]:
         print("Usage: python validate-plugin.py [plugin_directory]")
         print()
         print("Examples:")
-        print("  python validate-plugin.py              # Validate current directory")
+        print("  python validate-plugin.py              # Validate all plugins (template/ and examples/)")
         print("  python validate-plugin.py template/    # Validate template/")
         print("  python validate-plugin.py my-plugin/   # Validate my-plugin/")
         sys.exit(0)
 
-    plugin_dir = sys.argv[1] if len(sys.argv) > 1 else "."
-    sys.exit(check_plugin_structure(plugin_dir))
+    if len(sys.argv) > 1:
+        # Validate specific directory
+        sys.exit(validate_single_plugin(sys.argv[1]))
+    else:
+        # Validate all plugins in project root
+        sys.exit(validate_project_root())
